@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ele{
+            border: 20px solid red;
+            padding: 30px;
+            position: relative;
+            top: 20%;
+            margin:auto;
+            margin-top: 10%;
+            width: 50%;
+            
+  
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="first" class="ele">
+        <div id="second"class="ele">
+            <div id="third"class="ele"></div>
+        </div>
+    </div>
+
+    <script>
+        third.addEventListener("mouseover", function()
+        {
+            
+            this.style.transform= "rotate(360deg)";
+            this.style.borderColor ="blue";
+            this.style.transition ="5s";
+        });
+        second.addEventListener("mouseover", function(){
+            setTimeout(()=>{
+            this.style.transform = "rotate(360deg)";
+            this.style.borderColor ="green";
+            this.style.transition ="5s";
+        },2000)
+        });
+
+        first.addEventListener("mouseover", function(){
+            setTimeout(()=>{
+            this.style.transform="rotate(360deg)";
+            this.style.borderColor ="black";
+            this.style.transition ="5s";
+            },4000)
+        });
+    </script>
+</body>
+</html>
